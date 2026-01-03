@@ -146,8 +146,4 @@ Backend-focused developer (early career)
 **Skills used in this project:**  
 Python, Flask, MySQL, HTML, CSS, JavaScript
 
-## Note
-
-This project was built as part of my learning journey to understand real-world web application development.  
-All features were implemented manually to strengthen core concepts.
-
+---
