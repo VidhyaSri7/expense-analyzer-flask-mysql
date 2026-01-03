@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+    color: #333;
+}
+
+/* ================= NAVBAR ================= */
+nav {
+    background: #1e293b;
+    color: #fff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    font-size: 20px;
+}
+
+nav a {
+    color: #fff;
+    margin-left: 18px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+    max-width: 420px;
+    margin: 50px auto;
+    padding: 0 15px;
+}
+
+.container.wide {
+    max-width: 1000px;
+}
+
+/* ================= CARD ================= */
+.form-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+}
+
+.form-card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ================= FORMS ================= */
+input, select {
+    width: 100%;
+    padding: 11px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #1c7ed6;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1864ab;
+}
+
+/* ================= TITLES ================= */
+.page-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 35px;
+}
+
+/* ================= TABLE ================= */
+/* ================= TRANSACTIONS TABLE FIX ================= */
+
+/* ================= ATTRACTIVE TRANSACTIONS TABLE ================= */
+
+/* ===== TRANSACTIONS TABLE (SPACIOUS & CLEAN) ===== */
+
+.table-container {
+    width: 100%;
+    margin-top: 25px;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 12px;  /* space between rows */
+    font-size: 15px;
+}
+
+/* Header */
+.styled-table thead tr {
+    background: #1e293b;
+    color: #ffffff;
+}
+
+.styled-table th {
+    padding: 14px 18px;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Body rows */
+.styled-table tbody tr {
+    background: #ffffff;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    border-radius: 10px;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+/* Cells */
+.styled-table td {
+    padding: 16px 18px;   /* KEY: space inside cells */
+    color: #333;
+}
+
+/* Rounded row effect */
+.styled-table tbody tr td:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.styled-table tbody tr td:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Hover */
+.styled-table tbody tr:hover {
+    background-color: #e7f5ff;
+    transform: scale(1.01);
+    cursor: pointer;
+}
+
+/* Income / Expense badges */
+.income {
+    color: #2f9e44;
+    font-weight: 600;
+}
+
+.expense {
+    color: #e03131;
+    font-weight: 600;
+}
+
+
+
+/* ================= TYPE COLORS ================= */
+.expense {
+    color: #e03131;
+    font-weight: bold;
+}
+
+.income {
+    color: #2f9e44;
+    font-weight: bold;
+}

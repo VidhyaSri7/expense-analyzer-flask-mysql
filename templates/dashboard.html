@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard | Smart Expense Analyzer</title>
+
+    <!-- DASHBOARD ONLY CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <h1>Smart Expense Analyzer</h1>
+    <div class="nav-links">
+        <a href="/add">Add Transaction</a>
+        <a href="/transactions">Transactions</a>
+        <a href="/logout">Logout</a>
+    </div>
+</nav>
+
+<!-- DASHBOARD -->
+<div class="dashboard">
+
+    <!-- SUMMARY CARDS -->
+    <div class="cards">
+        <div class="card income">
+            <h4>Total Income</h4>
+            <p>₹ {{ total_income }}</p>
+        </div>
+
+        <div class="card expense">
+            <h4>Total Expense</h4>
+            <p>₹ {{ total_expense }}</p>
+        </div>
+
+        <div class="card balance">
+            <h4>Balance</h4>
+            <p>₹ {{ balance }}</p>
+        </div>
+    </div>
+
+    <!-- CHART CARD -->
+    <div class="chart-card">
+        <h3>Expense Distribution</h3>
+        <canvas id="expenseChart"></canvas>
+        <p id="noData" class="no-data">No expense data available</p>
+    </div>
+
+</div>
+
+<!-- DATA FOR JS -->
+<script id="expense-data" type="application/json">
+{
+    "categories": {{ categories | tojson }},
+    "totals": {{ totals | tojson }}
+}
+</script>
+
+<!-- DASHBOARD JS -->
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+
+</body>
+</html>
